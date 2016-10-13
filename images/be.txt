@@ -1,0 +1,11 @@
+#spacing:20
+#direction: right
+#arrowSize: 1
+#bendSize: 1
+#spacing: 50
+[<start>b] -> [<usecase>főoldal]
+[<usecase>főoldal] -> [<usecase>bejelentkezés]
+[<usecase>bejelentkezés]->[<choice>sikeres?]
+[<choice>sikeres?]nem->[<usecase>bejelentkezés]
+[<choice>sikeres?]igen->[<usecase>megnézendő filmjeim]
+[<usecase>megnézendő filmjeim]->[<end>a]

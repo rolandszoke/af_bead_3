@@ -1,0 +1,16 @@
+#spacing:20
+#direction: right
+#arrowSize: 1
+#bendSize: 1
+#spacing: 50
+[<start>b] -> [<usecase>beküldés]
+[<usecase>beküldés] -> [<usecase>új szinész]
+[<usecase>beküldés] -> [<usecase>új film]
+[<usecase>beküldés] -> [<usecase>új rendező]
+[<usecase>új szinész]-> [<usecase>előnézet]
+[<usecase>új film]-> [<usecase>előnézet]
+[<usecase>új rendező]-> [<usecase>előnézet]
+[<usecase>előnézet]->[<choice>megfelelő?]
+[<choice>megfelelő?]nem->[<usecase>beküldés]
+[<choice>megfelelő?]igen->[<usecase>megtekintés]
+[<usecase>megtekintés]->[<end>a]
