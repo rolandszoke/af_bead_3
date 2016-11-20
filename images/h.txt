@@ -1,8 +1,10 @@
-#spacing:20
+﻿#spacing:20
 #direction: right
 #arrowSize: 2
 #bendSize: 3
 #spacing: 25
+[<actor>moderátor]-->[<actor>felhasználó]
+[<actor>moderátor] - [<usecase>beküldés megerősítése]
 [<actor>felhasználó] - [<usecase>bejelentkezés]
 [<actor>felhasználó] - [<usecase>kijelentkezés]
 [<actor>felhasználó] - [<usecase>beküldés]

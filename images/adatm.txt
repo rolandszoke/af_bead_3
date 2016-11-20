@@ -1,0 +1,19 @@
+
+#direction: right
+#arrowSize: 1
+#spacing: 60
+#padding: 15
+
+[Adatmodell|
+  [User|felhasználónév;email;jelszó]
+  [User] 1-0..*[Látva|film]
+  [User] 1-0..*[Megnézendõ|film]
+  [User] 1-0..*[Kedvenc filmek|film]
+  [User] 1-0..*[Kedvenc szinészek|szinész]
+  [User] 1-0..*[Kedvenc rednezõk|rednezõ]
+  [Látva]0..*-1[Film|név;értékelés;látva;kedvenc;mûfaj;rendezõ;év;író]
+  [Megnézendõ]0..*-1[Film|név;értékelés;látva;kedvenc;mûfaj;rendezõ;év;író]
+  [Kedvenc filmek]0..*-1[Film|név;értékelés;látva;kedvenc;mûfaj;rendezõ;év;író]
+  [Kedvenc rednezõk]0..*-1[Rendezõ|név;értékelés;kedvenc]
+  [Kedvenc szinészek]0..*-1[Szinész|név;értékelés;kedvenc]
+]
