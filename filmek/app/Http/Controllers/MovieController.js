@@ -2,9 +2,9 @@
 
 const Database = use('Database')
 const Category = use('App/Model/Category')
-const Movies = use('App/Model/Movie')
-const Actors = use('App/Model/Actor')
-const Directors = use('App/Model/Director')
+const Movie = use('App/Model/Movie')
+const Actor = use('App/Model/Actor')
+const Director = use('App/Model/Director')
 const Validator = use('Validator')
 
 class MovieController {
@@ -40,8 +40,11 @@ class MovieController {
 */
   * create (request, response) {
     const categories = yield Category.all()
+    const directors = yield Director.all()
     yield response.sendView('movieCreate', {
       categories: categories.toJSON()
+    }, {
+      directors: directors.toJSON()
     });
   }
 
