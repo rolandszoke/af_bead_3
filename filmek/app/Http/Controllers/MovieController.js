@@ -42,9 +42,8 @@ class MovieController {
     const categories = yield Category.all()
     const directors = yield Director.all()
     yield response.sendView('movieCreate', {
+      directors: directors.toJSON(),
       categories: categories.toJSON()
-    }, {
-      directors: directors.toJSON()
     });
   }
 
