@@ -3,27 +3,30 @@
 #arrowSize: 2
 #bendSize: 3
 #spacing: 25
-[<actor>moderátor]-->[<actor>felhasználó]
-[<actor>moderátor] - [<usecase>beküldés megerősítése]
+
 [<actor>felhasználó] - [<usecase>bejelentkezés]
 [<actor>felhasználó] - [<usecase>kijelentkezés]
 [<actor>felhasználó] - [<usecase>beküldés]
+[<actor>felhasználó] - [<usecase>film szerkesztése]
+[<actor>felhasználó] - [<usecase>film törlése]
+
 [<usecase>beküldés] <-- [<usecase>új szinész]
 [<usecase>beküldés] <-- [<usecase>új film]
 [<usecase>beküldés] <-- [<usecase>új rendező]
-[<actor>felhasználó] - [<usecase>profiladatok megtekintése]
-[<usecase>profiladatok megtekintése]<--[<usecase>profiladatok szerkesztése]
-[<actor>felhasználó] - [<usecase>megnézendő filmjeim]
-[<actor>felhasználó] - [<usecase>látott filmjeim]
-[<actor>felhasználó] - [<usecase>kedvencek]
-[<usecase>kedvencek] <-- [<usecase>szinész]
-[<usecase>kedvencek] <-- [<usecase>film]
-[<usecase>kedvencek] <-- [<usecase>rendező]
+[<usecase>film megtekintése] <-- [<usecase>film szerkesztése]
+[<usecase>film megtekintése] <-- [<usecase>film törlése]
+
 [<actor>felhasználó]-->[<actor>vendég]
 [<actor>vendég]-[<usecase>főoldal]
-[<actor>vendég]-[<usecase>keresés]
 [<actor>vendég]-[<usecase>regisztrálás]
 [<actor>vendég]-[<usecase>böngészés]
+
 [<usecase>böngészés] <-- [<usecase>szinészek]
 [<usecase>böngészés] <-- [<usecase>filmek]
 [<usecase>böngészés] <-- [<usecase>rendezők]
+[<usecase>szinészek] <-- [<usecase>szinészek szűrése]
+[<usecase>filmek] <-- [<usecase>filmek szűrése]
+[<usecase>rendezők] <-- [<usecase>rendezők szűrése]
+[<usecase>szinészek] <-- [<usecase>szinész megtekintése]
+[<usecase>filmek] <-- [<usecase>film megtekintése]
+[<usecase>rendezők] <-- [<usecase>rendező megtekintése]

@@ -1,4 +1,4 @@
-#spacing:20
+﻿#spacing:20
 #direction: right
 #arrowSize: 1
 #bendSize: 1
@@ -7,5 +7,5 @@
 [<usecase>főoldal] -> [<usecase>bejelentkezés]
 [<usecase>bejelentkezés]->[<choice>sikeres?]
 [<choice>sikeres?]nem->[<usecase>bejelentkezés]
-[<choice>sikeres?]igen->[<usecase>megnézendő filmjeim]
-[<usecase>megnézendő filmjeim]->[<end>a]
+[<choice>sikeres?]igen->[<usecase>bejelentkezett főoldal]
+[<usecase>bejelentkezett főoldal]->[<end>a]
